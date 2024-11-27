@@ -40,7 +40,7 @@ private_key = "your_private_key_here"
 
 Run the `main.py` script to fetch data about Marvel characters from the API and save it to a JSON file:
 ```bash
-python3 src/main.py
+python src/main.py
 ```
 
 In details:
