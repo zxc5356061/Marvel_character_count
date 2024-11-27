@@ -54,12 +54,12 @@ In details:
 ## Project Structure
 ```
 Marvel_count/
-|├── .venv/                 # Virtual environment directory
+|├── .venv/                         # Virtual environment directory
 |├── src/
 |   |├── main.py            
-|   |├── marvel_character_count.py # class to fetch and extract character appearance frequency
-|   |├── marvel_characters.json  # Fetched character data (generated)
-|   |├── result.json         # Results output (generated)
+|   |├── marvel_character_count.py  # class to fetch and extract character appearance frequency
+|├── marvel_characters.json         # Fetched character data (generated)
+|├── result.json                    # Results output (generated)
 |├── README.md
 |├── .gitignore
 ```
