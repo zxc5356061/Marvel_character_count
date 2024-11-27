@@ -25,7 +25,7 @@ To run this project, you need:
 
 The project is organised into several scripts to handle specific tasks:
 
-### 1. API Authentication
+#### 1. API Authentication
 
 To use the Marvel API, you need to generate your own public and private keys from the [Marvel Developer Portal](https://developer.marvel.com/).
 
@@ -35,11 +35,11 @@ public_key = "your_public_key_here"
 private_key = "your_private_key_here"
 ```
 
-### 2. Fetch Marvel Characters
+#### 2. Fetch Marvel Characters
 
 Run the `main.py` script to fetch data about Marvel characters from the API and save it to a JSON file:
 ```bash
-python src/main.py
+python3 src/main.py
 ```
 
 In details:
