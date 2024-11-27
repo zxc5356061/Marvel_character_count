@@ -6,9 +6,10 @@ This is a Python project that calculates how often Marvel characters appear in c
 
 ## Features
 
-- Fetch data about Marvel characters from the "get/v1/public/characters".
+- Fetch data about all Marvel characters from the "get/v1/public/characters".
 - Save the data to a JSON file for offline access without fetching the data again.
-- Extract counts values from fetched data to show how often each character appears in Marvel comics.
+- Extract counts values from `comic` in fetched data to show how often each character appears in Marvel comics.
+- Stored final results as a JSON file for easy reference
 
 ---
 
@@ -44,10 +45,10 @@ python3 src/main.py
 
 In details:
 
-    - The scripts fetch Marvel character data via 'get/v1/public/characters'
-    - Fetched data is stored as `marvel_characters.json` for offline access or debugging
-    - Appearance count values are extracted from `comics` in API responses, which list containing comics that feature each character
-    - Final results are stored as `result.json` for reference.
+- The scripts fetch Marvel character data via 'get/v1/public/characters'
+- Fetched data is stored as `marvel_characters.json` for offline access or debugging
+- Appearance count values are extracted from `comics` in API responses, which list containing comics that feature each character
+- Final results are stored as `result.json` for reference.
 
 ---
 
