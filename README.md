@@ -1,45 +1,74 @@
 # Marvel Count
 
-This is a Python project that helps find out how often Marvel characters appear in comics. It uses the Marvel API to fetch data, saves it in a file, and lets you analyze it to see which characters appear most often.
+This is a Python project that calculates how often Marvel characters appear in comics using data from the Marvel API. The scripts fetch, process, and analyze character data, saving the results in JSON files for easy use.
 
 ---
 
-## What It Does
-- Gets data about Marvel characters from the [Marvel API](https://developer.marvel.com/).
-- Saves the character data in a json file so you can use it later without fetching again.
-- Extract the counts from fetch data to see how many comics each character appears in.
+## Features
+
+- Fetch data about Marvel characters from the "get/v1/public/characters".
+- Save the data to a JSON file for offline access without fetching the data again.
+- Extract counts values from fetched data to show how often each character appears in Marvel comics.
 
 ---
 
-## What You Need
+## Requirements
 
-To use this project, you need:
+To run this project, you need:
 
-- Python 3.12 or newer.
-- A [Marvel API key](https://developer.marvel.com/).
+- Python 3.12 or higher
+- A [Marvel API key](https://developer.marvel.com/)
 
 ---
 
-## What the Project Looks Like
+## Usage
+
+The project is organised into several scripts to handle specific tasks:
+
+### 1. API Authentication
+
+To use the Marvel API, you need to generate your own public and private keys from the [Marvel Developer Portal](https://developer.marvel.com/).
+
+Update the `public_key` and `private_key` in `marvel_character_count.py` with your keys:
+```python
+public_key = "your_public_key_here"
+private_key = "your_private_key_here"
+```
+
+### 2. Fetch Marvel Characters
+
+Run the `main.py` script to fetch data about Marvel characters from the API and save it to a JSON file:
+```bash
+python src/main.py
+```
+
+In details:
+
+    - The scripts fetch Marvel character data via 'get/v1/public/characters'
+    - Fetched data is stored as `marvel_characters.json` for offline access or debugging
+    - Appearance count values are extracted from `comics` in API responses, which list containing comics that feature each character
+    - Final results are stored as `result.json` for reference.
+
+---
+
+## Project Structure
 ```
 Marvel_count/
-|├── .venv/                 # Virtual environment folder
+|├── .venv/                 # Virtual environment directory
 |├── src/
-|   |├── main.py            # Main file (if needed)
-|   |├── get_characters.py  # Script to fetch data
-|   |├── count_appearance.py # Script to count appearances
-|   |├── marvel_character_count.py # Core logic and main class
-|   |├── marvel_characters.json  # File with saved character data
-|├── requirements.txt       # List of Python packages needed
-|├── README.md              # Instructions and info about the project
+|   |├── main.py            
+|   |├── marvel_character_count.py # class to fetch and extract character appearance frequency
+|   |├── marvel_characters.json  # Fetched character data (generated)
+|   |├── result.json         # Results output (generated)
+|├── README.md
+|├── .gitignore
 ```
 
 ---
 
-## Example Results
+## Example Output
 
-Here’s an example of what the results might look like:
-
+Here is an example of the output in `result.json`:
 ```json
 {
   "Spider-Man": 1534,
@@ -52,31 +81,4 @@ Here’s an example of what the results might look like:
 
 ---
 
-## How to Get Your API Keys
-To use the Marvel API, you need to sign up at the [Marvel Developer Portal](https://developer.marvel.com/) and get your public and private keys.
-
-Add your keys to the `MarvelCharacterCount` class in `marvel_character_count.py`:
-```python
-public_key = "your_public_key_here"
-private_key = "your_private_key_here"
-```
-
----
-
-## Want to Help?
-Contributions are welcome! If you find a bug or have an idea to make this better:
-1. Make a copy of this repository (fork it).
-2. Create a new branch.
-3. Send a pull request.
-
----
-
-## License
-This project is free to use under the MIT License. Check the `LICENSE` file for details.
-
----
-
-## Thanks To
-- [Marvel API](https://developer.marvel.com/) for providing the data.
-- Marvel comics for inspiring this project!
 
