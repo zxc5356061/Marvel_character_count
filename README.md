@@ -67,19 +67,3 @@ Marvel_count/
 
 ---
 
-## Example Output
-
-Here is an example of the output in `result.json`:
-```json
-{
-  "Spider-Man": 1534,
-  "Iron Man": 1450,
-  "Hulk": 1203,
-  "Thor": 1102,
-  "Captain America": 1034
-}
-```
-
----
-
-
